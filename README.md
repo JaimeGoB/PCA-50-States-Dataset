@@ -39,21 +39,21 @@
   land area in square miles
 
 
-## Exploratory Data Analysis
+# Exploratory Data Analysis
 
-#### Statistics from Dataset
+## Statistics from Dataset
 
 <img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/stats.png"  />
 
-#### Covariance Matrix, Scatterplots and Histograms of Dataset
+## Covariance Matrix, Scatterplots and Histograms of Dataset
 
 <img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/cov-histogram-scatter-plots.png"  />
 
-#### Boxplots
+## Boxplots
 
 <img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/boxplots.png"  />
 
-### Principle Component Analysis on the Dataset
+## Principle Component Analysis on the Dataset
 
 The dataset has 8 predictor variables. Therefore the minimum amount of Principle Components are 8 ( min(n-1, p)).
 
@@ -62,11 +62,11 @@ Therefore, we will only care up to PC4, thus slashing the predictors in half.
 
 <img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/pca.png"  />
 
-##### We are also able to see that none of the principle components are correlated to each other:
+##  We are also able to see that none of the principle components are correlated to each other:
 
 <img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/cov_matrix.png"  />
 
-#### Proportion of Variance Explained By Each Principle Component
+## Proportion of Variance Explained By Each Principle Component
 
 The Cumulative sum explained by each PC is:
 <img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/pve-values.png"  />
@@ -74,13 +74,18 @@ The Cumulative sum explained by each PC is:
 
 <img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/pve.png"  />
 
-#### PCA1 vs PCA2
+## PCA1 vs PCA2
 
-<img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/pca1-vs-pca2.png"  />
+<img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/pca1-vs-pc2.png"  />
 
 
-#### Find a trend in "southern states"
+## Find a trend in "southern states"
+
+From the previous plot it is evident to see that illiteracy rates are a commen trend for southern states.
 <img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/southern.png"  />
+
+From a map with correspending values we can conclude that southern states have higher illetaracy rates.
+<img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/illiteracy.png"  />
 
 
 
