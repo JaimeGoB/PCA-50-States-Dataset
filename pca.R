@@ -72,7 +72,8 @@ par(mfrow=c(1,1))
 
 # Yes, because the variables are all on different scales. 
 # The variables with biggest values will take over.
-
+states <- scale(states)
+states
 ##################################################
 # (c) Regardless of your answer in (b), standardize the variables, 
 # and perform a principal components analysis (PCA) of the data. 
@@ -107,7 +108,26 @@ principle_component_states
 score_cov_matrix <- round(cov(principle_component_states$x), 3)
 score_cov_matrix 
 
-# the cumulative percentage of the total variability explained by the two components
+###### correlation between x's and pc1 ###### 
+covariance_pc_predictors <- c()
+
+#Iterating thorugh PC's
+for(j in 1:dim(principle_component_states$x)[2]){
+  #initializing an empty vector to store covariances
+  cov_j_i <- c()
+  #Iterating through all predictors
+  for (i in 1:length(states)) {
+    # COV( Z_j , x_j)
+    cov_j_i <- cov(principle_component_states$x[,j] , states[,])
+  }
+  #store covariances for each pc_j vs predictors
+  covariance_pc_predictors <- rbind(covariance_pc_predictors, cov_j_i)
+}
+
+rownames(covariance_pc_predictors) <- c("PC1", "PC2","PC3","PC4","PC5","PC6","PC7","PC8")
+covariance_pc_predictors
+
+###### the cumulative percentage of the total variability explained by the two components ######
 principle_component_var <- principle_component_states$sdev^2
 proportion_variance_explained_pc <- principle_component_var/sum(principle_component_var)
 proportion_variance_explained_pc_total <- cumsum(proportion_variance_explained_pc)
@@ -116,7 +136,7 @@ proportion_variance_explained_pc_total
 
 
 par(mfrow=c(1,1))
-#Displaying scores of components
+###### Displaying scores of components ######
 plot(proportion_variance_explained_pc_total, 
      main = "Number of Principle Components VS \nCumulative Proportion of Variance Explained",
      xlab = "Principal Component", 
@@ -130,7 +150,7 @@ plot(proportion_variance_explained_pc_total,
 legend("bottomright", pch = 16, legend = "Principle Component", col = "red")
 
 
-#Plotting first two principle components
+####### Plotting first two principle components #######
 biplot(principle_component_states, scale = 0)
 
 #Reference:
