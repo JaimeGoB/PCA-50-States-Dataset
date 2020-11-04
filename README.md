@@ -84,7 +84,7 @@ The Cumulative sum explained by each PC is:
 From the previous plot it is evident to see that illiteracy rates are a commen trend for southern states.
 <img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/southern.png"  />
 
-From a map with correspending values we can conclude that southern states have higher illetaracy rates.
+# From a map with correspending values we can conclude that southern states have higher illetaracy rates.
 <img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/illiteracy.png"  />
 
 
