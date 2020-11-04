@@ -78,6 +78,7 @@ The Cumulative sum explained by each PC is:
 
 <img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/pca1-vs-pca2.png"  />
 
+
 #### Find a trend in "southern states"
 <img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/southern.png"  />
 
