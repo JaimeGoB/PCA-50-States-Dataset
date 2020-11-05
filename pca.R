@@ -105,11 +105,11 @@ principle_component_states
 ##################################################
 
 # table-correlations of the standardized variables with the components and 
-score_cov_matrix <- round(cov(principle_component_states$x), 3)
-score_cov_matrix 
+score_cor_matrix <- round(cov(principle_component_states$x), 3)
+score_cor_matrix 
 
 ###### correlation between x's and pc1 ###### 
-covariance_pc_predictors <- c()
+correlation_pc_predictors <- c()
 
 #Iterating thorugh PC's
 for(j in 1:dim(principle_component_states$x)[2]){
@@ -118,14 +118,14 @@ for(j in 1:dim(principle_component_states$x)[2]){
   #Iterating through all predictors
   for (i in 1:length(states)) {
     # COV( Z_j , x_j)
-    cov_j_i <- cov(principle_component_states$x[,j] , states[,])
+    cov_j_i <- cor(principle_component_states$x[,j] , states[,])
   }
   #store covariances for each pc_j vs predictors
-  covariance_pc_predictors <- rbind(covariance_pc_predictors, cov_j_i)
+  correlation_pc_predictors <- rbind(correlation_pc_predictors, cov_j_i)
 }
 
-rownames(covariance_pc_predictors) <- c("PC1", "PC2","PC3","PC4","PC5","PC6","PC7","PC8")
-covariance_pc_predictors
+rownames(correlation_pc_predictors) <- c("PC1", "PC2","PC3","PC4","PC5","PC6","PC7","PC8")
+correlation_pc_predictors
 
 ###### the cumulative percentage of the total variability explained by the two components ######
 principle_component_var <- principle_component_states$sdev^2
