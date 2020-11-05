@@ -62,20 +62,20 @@ Therefore, we will only care up to PC4, thus slashing the predictors in half.
 
 <img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/pca.png"  />
 
-##  Covariance among Principle Components
+##  Correlation among Principle Components
 
 We are also able to see that none of the principle components are correlated to each other. This can be seen because only the diagonal elements are non-zero.
 
 <img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/cov_matrix.png"  />
 
-## Covariance between Principle Components and Predictors
+## Correlation between Principle Components and Predictors
 
 
 I noted that highest covariance values represent the eigenvectors with strongest relationship to that dimension.
 
 It is also evident to see that the higher the PC the weaker the covariance.
 
-<img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/covariance_pc_predictors.png"  />
+<img src="https://github.com/JaimeGoB/PCA-50-States-Dataset/blob/main/data/correlation_pc_predictors.png"  />
 
 ## Proportion of Variance Explained By Each Principle Component
 
